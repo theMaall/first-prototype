@@ -5,34 +5,26 @@
     <title>Cecropia's The Hall VR in A-Frame</title>
 
 
-    <meta property="og:title" content="Cecropia's The Hall VR in A-Frame" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://cecropia.github.io/thehallaframe/" />
-    <meta property="og:image" content="https://cecropia.github.io/thehallaframe/screenshots/thehall1.jpg" />
-    <meta property="og:description" content="WebVR demo that displays art " />
-
-    <meta name="twitter:card" content="summary_large_image">
-
-    <meta name="twitter:title" content="Cecropia's The Hall VR in A-Frame">
-    <meta name="twitter:description" content="WebVR demo that displays art ">
-    <meta name="twitter:image" content="https://cecropia.github.io/thehallaframe/screenshots/thehall1.jpg">
-
-
-
+    <!--<meta property="og:title" content="Cecropia's The Hall VR in A-Frame" />-->
+    <!--<meta property="og:type" content="website" />-->
+    <!--<meta property="og:url" content="https://cecropia.github.io/thehallaframe/" />-->
+    <!--<meta property="og:image" content="https://cecropia.github.io/thehallaframe/screenshots/thehall1.jpg" />-->
+    <!--<meta property="og:description" content="WebVR demo that displays art " />-->
+    <!--<meta name="twitter:card" content="summary_large_image">-->
+    <!--<meta name="twitter:title" content="Cecropia's The Hall VR in A-Frame">-->
+    <!--<meta name="twitter:description" content="WebVR demo that displays art ">-->
+    <!--<meta name="twitter:image" content="https://cecropia.github.io/thehallaframe/screenshots/thehall1.jpg">-->
+    <!--<meta name="description" content="Cecropia's The Hall VR in A-Frame">-->
 
     <link rel="icon" href="favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <meta name="description" content="Cecropia's The Hall VR in A-Frame">
-
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <script src="js/aframe.0.7.0.min.js"></script>
+    <!--<script src="js/aframe.0.7.0.min.js"></script>-->
     <script src="js/aframe-extras.min.js"></script>
-
     <script src="js/lzma.js"></script>
     <script src="js/ctm.js"></script>
     <script src="js/CTMLoader.js"></script>
-
     <script src="js/aframe-teleport-controls.min.js"></script>
     <script src="js/spheres_anim.js"></script>
     <script src="js/anim_1.js"></script>
@@ -45,12 +37,13 @@
 
 
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no,maximum-scale=1">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--<meta http-equiv="content-type" content="text/html; charset=utf-8">-->
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no,maximum-scale=1">-->
     <title>Examples • Walls</title>
-    <!--<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>-->
-    <!--<script src="../bundle.js"></script>-->
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="bundle.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.1.0/dist/aframe-physics-system.min.js"></script>
     <script src="../libs/aframe-extra-controls.js"></script>
     <script src="../libs/aframe-physics-system.js"></script>
     <script src="../libs/aframe-extra-min.js"></script>
@@ -64,13 +57,35 @@
 <a-scene>
 
     <a-entity mobile></a-entity>
-    <!--<a-entity id="rig" movement-controls kinatic-body>-->
+    <!--<a-entity id="rig" movement-controls kinematic-body>-->
         <!--<a-entity id="camera"-->
                   <!--camera-->
-                  <!--position="0 0 0"-->
+                  <!--position="0 100 0"-->
                   <!--look-controls="pointerLockEnabled: true"></a-entity>-->
     <!--</a-entity>-->
     <a-grid static-body></a-grid>
+
+    <!-- Obstacles -->
+    <a-box color="red"
+           width="15" height="15" depth="0.1"
+           position="0 0 7"
+           static-body></a-box>
+    <a-box color="#39BB82"
+           width="15" height="15" depth="0.1"
+           position="0 0 -7"
+           static-body></a-box>
+    <a-box color="blue"
+           width="15" height="15" depth="0.1"
+           position="0 7.4 0"
+           rotation="90"
+           static-body></a-box>
+    <a-box color="brown"
+           width="15" height="15" depth="0.1"
+           position="-7.4 0 0"
+           rotation=" 0 90 0"
+           static-body></a-box>
+
+
     <a-entity light="type: directional; color: #FFF; intensity: 0.5" position="2 20 0"></a-entity>
     <a-entity light="type: ambient; color: #FFF"></a-entity>
 
