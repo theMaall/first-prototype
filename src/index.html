@@ -64,12 +64,12 @@
 <a-scene>
 
     <a-entity mobile></a-entity>
-    <a-entity id="rig" movement-controls kinematic-body>
-        <a-entity id="camera"
-                  camera
-                  position="0 1.6 0"
-                  look-controls="pointerLockEnabled: true"></a-entity>
-    </a-entity>
+    <!--<a-entity id="rig" movement-controls kinatic-body>-->
+        <!--<a-entity id="camera"-->
+                  <!--camera-->
+                  <!--position="0 0 0"-->
+                  <!--look-controls="pointerLockEnabled: true"></a-entity>-->
+    <!--</a-entity>-->
     <a-grid static-body></a-grid>
     <a-entity light="type: directional; color: #FFF; intensity: 0.5" position="2 20 0"></a-entity>
     <a-entity light="type: ambient; color: #FFF"></a-entity>
@@ -106,9 +106,9 @@
         <!-- - floor -->
 
         <!-- hall -->
-        <a-asset-item id="hall-obj" src="models/Mall.obj" ></a-asset-item>
-        <a-asset-item id="hall-mtl" src="test/house_c4d.mtl"></a-asset-item>
-        <img id="hall-texture" src="test/houseSurface_Color.jpg">
+        <a-asset-item id="hall-obj" src="test/Mall.obj" ></a-asset-item>
+        <a-asset-item id="hall-mtl" src="test/Mall.mtl"></a-asset-item>
+        <img id="hall-texture" src="test/NullSurface_Color.png">
         <!--<img id="hall_normal-texture" src="textures/hall_normal.jpg">-->
         <!-- - hall -->
 
@@ -244,9 +244,9 @@
     <a-sky color="#FFFFFF" material="src: #sky_sphere-texture"></a-sky>
 
     <!--<a-entity obj-model="obj: #floor-obj;" material="src: #floor-texture; normalMap: #floor_normal-texture; metalness: 0.6" id="floor"></a-entity>-->
-    <a-entity obj-model="obj: #hall-obj;" material="src: #hall-texture;" mtl="#hall-mtl" static-body></a-entity>
+    <a-entity obj-model="obj: #hall-obj;" material="src: #hall-texture;" mtl="#hall-mtl"  static-body></a-entity>
     <a-box color="#39BB82"
-           width="10" height="10" depth="1"
+           width="100" height="10" depth="100"
            static-body></a-box>
     <!--<a-entity obj-model="obj: #hall_low_floor-obj;" material="opacity: 0.0" id="hall_low_floor"></a-entity>-->
     <!--<a-entity obj-model="obj: #acropolis-obj;" material="src: #acropolis-texture"></a-entity>-->
